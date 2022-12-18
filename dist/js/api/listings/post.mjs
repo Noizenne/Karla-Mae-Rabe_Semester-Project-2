@@ -20,7 +20,7 @@ export async function createListing(listingData) {
   });
 
   if (response.ok) {
-    console.log("Post success.");
+    location.href = "/code/profile/";
   }
 
   return await response.json();

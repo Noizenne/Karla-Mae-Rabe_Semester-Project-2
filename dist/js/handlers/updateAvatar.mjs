@@ -14,7 +14,7 @@ export async function editAvatar() {
       save("avatar", form.avatar.value);
 
       await updateAvatar(avatar);
-      location.reload();
+      location.href = "/code/profile/";
     });
   }
 }

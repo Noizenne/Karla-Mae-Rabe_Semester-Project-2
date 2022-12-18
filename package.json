@@ -1,0 +1,47 @@
+{
+  "name": "karla-mae-rabe_semester-project-2",
+  "version": "1.0.0",
+  "description": "![image](https://user-images.githubusercontent.com/73695367/208250363-426770ac-761f-4ca4-99f8-e12f8962e8d8.png)",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src/scss:dist/css",
+    "start": "sass --watch src/scss:dist/css && live-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier -w src/js/**/*.mjs",
+    "lint": "eslint src/**/*.mjs",
+    "lint-fix": "eslint src/**/*.mjs --cache --fix",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noizenne/Karla-Mae-Rabe_Semester-Project-2.git"
+  },
+  "author": "Karla Mae Rabe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noizenne/Karla-Mae-Rabe_Semester-Project-2/issues"
+  },
+  "homepage": "https://github.com/Noizenne/Karla-Mae-Rabe_Semester-Project-2#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.8.1",
+    "sass": "^1.57.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
+  }
+}

@@ -10,7 +10,7 @@ export function templateProfileListings(listingData) {
 
     const section = document.createElement("div");
     section.classList.add("listing");
-    section.innerHTML = `<a href="/Treasures/listings/listing/index.html?id=${listings.id}">
+    section.innerHTML = `<a href="/code/listings/listing/index.html?id=${listings.id}">
     <div class="d-flex justify-content-center">${listings.title}</div>
      <div class="d-flex justify-content-center align-items-center  date"><i class="fa-solid fa-hourglass-start"></i>${endsAtDate}</div></a>
      <div class="d-flex justify-content-center"><img src="${listings.media}"</img></div>

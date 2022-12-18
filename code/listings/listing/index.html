@@ -11,14 +11,15 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/zaz4rtq.css" />
     <script
       src="https://kit.fontawesome.com/d527618ed6.js"
       crossorigin="anonymous"
     ></script>
-    <title>Treasures | Bid</title>
+    <title>Treasures | Listing</title>
     <meta
       name="description"
-      content="This is the bidding page of Treasures Auction House. Here you can place bid on your clicked item."
+      content="This is the page of your selected listing of Treasures Auction House. Here you can see the title, description, how many has places bids and place a bid yourself."
     />
   </head>
   <body>
@@ -54,12 +55,12 @@
                   <a
                     class="nav-link me-4"
                     id="login-link"
-                    href="/Treasures/login/index.html"
+                    href="/code/login/index.html"
                     >Login</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link btn" href="/Treasures/register/index.html"
+                  <a class="nav-link btn" href="/code/register/index.html"
                     >Sign Up</a
                   >
                 </li>
@@ -75,7 +76,7 @@
                   <button
                     type="click"
                     class="btn"
-                    onclick="location.href='/Treasures/profile/index.html'"
+                    onclick="location.href='/code/profile/index.html'"
                   >
                     Profile
                   </button>
@@ -87,36 +88,23 @@
       </nav>
     </header>
     <main>
-      <section class="bid d-flex justify-content-center">
-        <div>
-          <!--Bid form-->
-          <form class="bid-form">
-            <h3 class="text-center mt-3">Place a bid</h3>
-            <div class="form-group d-flex justify-content-center row">
-              <label for="amount" class="d-flex justify-content-center row"
-                >Amount</label
-              ><br />
-              <!--Amount input-->
-              <input
-                type="number"
-                name="amount"
-                id="amount-input"
-                class="form-control"
-                style="width: auto"
-              />
-            </div>
-            <div class="d-flex justify-content-center">
-              <!--Submit button-->
-              <button type="submit" class="btn d-flex my-3">Place bid</button>
-            </div>
-          </form>
-          <!--Error if not logged in-->
-          <div class="bidError d-flex justify-content-center"></div>
+      <section>
+        <!--Loader-->
+        <div class="loader"></div>
+        <!--Single listing results-->
+        <div class="singleListing d-flex justify-content-center col-lg"></div>
+        <div class="m-3 p-3">
+          <h2>Top bidders</h2>
+          <!--User who have placed a bid-->
+          <div class="bidders col-md-5">
+            <!--If there is no bidders-->
+            <div class="noBids"></div>
+          </div>
         </div>
       </section>
     </main>
     <!--Footer-->
-    <footer class="fixed-bottom">
+    <footer>
       <div class="footer d-flex justify-content-around mt-3">
         <div
           class="footer-right d-flex justify-content-center row"
@@ -125,7 +113,7 @@
           <h2 class="d-flex justify-content-center">Treasures</h2>
           <a
             class="d-flex justify-content-center"
-            href="/Treasures/listings/index.html"
+            href="/code/listings/index.html"
             >Listings</a
           >
         </div>

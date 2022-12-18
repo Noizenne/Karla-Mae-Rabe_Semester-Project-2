@@ -8,7 +8,7 @@ export function templateListings(listingsData) {
   const section = document.createElement("div");
   section.classList.add("listing");
   section.classList.add("m-2");
-  section.innerHTML = `<a href="/Treasures/listings/listing/index.html?id=${listingsData.id}">
+  section.innerHTML = `<a href="/code/listings/listing/index.html?id=${listingsData.id}">
    <div class="d-flex justify-content-center">${listingsData.title}</div>
     <div class="date d-flex justify-content-center align-items-center"><i class="fa-solid fa-hourglass-start"></i>${endsAtDate}</div></a>
   `;

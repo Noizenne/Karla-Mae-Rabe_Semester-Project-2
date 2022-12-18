@@ -16,10 +16,10 @@
       src="https://kit.fontawesome.com/d527618ed6.js"
       crossorigin="anonymous"
     ></script>
-    <title>Treasures | All Listings</title>
+    <title>Treasures | My Profile</title>
     <meta
       name="description"
-      content="This is listings page of Treasures Auction House. Here you can see all auctions you can get with credits."
+      content="This is your profile on Treasures Auction House. Here is where you can see your name, email, your credits and if you have any listings. You can also create your own listing."
     />
   </head>
   <body>
@@ -55,12 +55,12 @@
                   <a
                     class="nav-link me-4"
                     id="login-link"
-                    href="/Treasures/login/index.html"
+                    href="/code/login/index.html"
                     >Login</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link btn" href="/Treasures/register/index.html"
+                  <a class="nav-link btn" href="/code/register/index.html"
                     >Sign Up</a
                   >
                 </li>
@@ -76,7 +76,7 @@
                   <button
                     type="click"
                     class="btn"
-                    onclick="location.href='/Treasures/profile/index.html'"
+                    onclick="location.href='/code/profile/index.html'"
                   >
                     Profile
                   </button>
@@ -89,20 +89,35 @@
     </header>
     <main>
       <section>
-        <div class="row">
-          <!--Search results-->
-          <div class="searchResult col p-3 me-3"></div>
-        </div>
-        <h1 class="m-2 p-2">All Gems</h1>
-        <!--Listings results-->
-        <div class="listings d-flex justify-content-center row">
-          <!--Loader-->
-          <div class="loader"></div>
+        <!--Loader-->
+        <div class="loader"></div>
+        <!--Profile section-->
+        <div class="profileInfo">
+          <h1 class="m-3 p-3">My Profile</h1>
         </div>
       </section>
+      <section>
+        <!--Profile listings-->
+        <div class="profileListings d-flex justify-content-center row">
+          <div class="d-flex justify-content-between">
+            <h1 class="m-3 p-3">Listings</h1>
+            <!--Create new listing button-->
+            <button
+              class="btn m-3 p-3"
+              id="plus"
+              onclick="location.href='/code/profile/create/index.html'"
+              style="border: none"
+            >
+              Create <i class="fa-sharp fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!--If there is no listing-->
+      <div class="noListing"></div>
     </main>
     <!--Footer-->
-    <footer>
+    <footer style="width: 100%; margin: auto">
       <div class="footer d-flex justify-content-around mt-3">
         <div
           class="footer-right d-flex justify-content-center row"
@@ -111,7 +126,7 @@
           <h2 class="d-flex justify-content-center">Treasures</h2>
           <a
             class="d-flex justify-content-center"
-            href="/Treasures/listings/index.html"
+            href="/code/listings/index.html"
             >Listings</a
           >
         </div>

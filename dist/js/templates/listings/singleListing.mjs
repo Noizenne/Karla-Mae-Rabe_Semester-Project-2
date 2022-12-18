@@ -12,7 +12,7 @@ export function templateListing(listingData) {
   section.classList.add("single");
   section.innerHTML = `<div class="d-flex justify-content-center row">
       <div class="d-flex justify-content-center"><img style="solid 1px white" src="${listingData.media}"</img></div>
-      <div class="d-flex justify-content-center">Seller: &nbsp; <a href="/Treasures/user/index.html?name=${listingData.seller.name}">${listingData.seller.name}</a></div>
+      <div class="d-flex justify-content-center">Seller: &nbsp; <a href="/code/user/index.html?name=${listingData.seller.name}">${listingData.seller.name}</a></div>
       
       </div>
       <div class="d-flex justify-content-center row" style="height: auto">
@@ -22,7 +22,7 @@ export function templateListing(listingData) {
       <div class="d-flex justify-content-center" >Description:</div>
       <div class="desc date d-flex justify-content-center" style="width: auto;">${listingData.description}</div>
       <div class="d-flex justify-content-center">
-      <button id="makeBid" class=" btn m-2" onclick="location.href='/Treasures/listings/listing/bid/index.html?id=${listingData.id}'">Make a bid</button>
+      <button id="makeBid" class=" btn m-2" onclick="location.href='/code/listings/listing/bid/index.html?id=${listingData.id}'">Make a bid</button>
       </div>
       </div>`;
 

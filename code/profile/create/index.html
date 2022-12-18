@@ -16,10 +16,10 @@
       src="https://kit.fontawesome.com/d527618ed6.js"
       crossorigin="anonymous"
     ></script>
-    <title>Treasures | My Profile</title>
+    <title>Treasures | Create new listing</title>
     <meta
       name="description"
-      content="This is your profile on Treasures Auction House. Here is where you can see your name, email, your credits and if you have any listings. You can also create your own listing."
+      content="This is the page on Treasures Auction House where you can create your own listing. The listing must contain a title and when it ends."
     />
   </head>
   <body>
@@ -55,12 +55,12 @@
                   <a
                     class="nav-link me-4"
                     id="login-link"
-                    href="/Treasures/login/index.html"
+                    href="/code/login/index.html"
                     >Login</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link btn" href="/Treasures/register/index.html"
+                  <a class="nav-link btn" href="/code/register/index.html"
                     >Sign Up</a
                   >
                 </li>
@@ -76,7 +76,7 @@
                   <button
                     type="click"
                     class="btn"
-                    onclick="location.href='/Treasures/profile/index.html'"
+                    onclick="location.href='/code/profile/index.html'"
                   >
                     Profile
                   </button>
@@ -87,37 +87,85 @@
         </div>
       </nav>
     </header>
+
     <main>
-      <section>
-        <!--Loader-->
-        <div class="loader"></div>
-        <!--Profile section-->
-        <div class="profileInfo">
-          <h1 class="m-3 p-3">My Profile</h1>
-        </div>
-      </section>
-      <section>
-        <!--Profile listings-->
-        <div class="profileListings d-flex justify-content-center row">
-          <div class="d-flex justify-content-between">
-            <h1 class="m-3 p-3">Listings</h1>
-            <!--Create new listing button-->
-            <button
-              class="btn m-3 p-3"
-              id="plus"
-              onclick="location.href='/Treasures/profile/create/index.html'"
-              style="border: none"
+      <section class="m-auto col-md-5">
+        <div class="createListing mt-3">
+          <div class="container">
+            <div
+              id="createListing-row"
+              class="row justify-content-center align-items-center"
             >
-              Create <i class="fa-sharp fa-solid fa-plus"></i>
-            </button>
+              <!--Create listing form-->
+              <form id="createListing-form">
+                <h3 class="text-center mt-3">Create a listing</h3>
+                <div class="form-group">
+                  <!--Title input-->
+                  <label for="title">Title</label><br />
+                  <input
+                    type="text"
+                    name="title"
+                    id="title"
+                    class="form-control"
+                    placeholder="Required"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <!--Description input-->
+                  <label for="description">Description</label><br />
+                  <textarea
+                    type="text"
+                    name="description"
+                    id="description"
+                    class="form-control"
+                    maxlength="50"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <!--Tags input-->
+                  <label for="tags">Tags</label><br />
+                  <input
+                    type="text"
+                    name="tags"
+                    id="tags"
+                    class="form-control"
+                    title="Seperate tags with commas"
+                  />
+                </div>
+                <div class="form-group">
+                  <!--Media input-->
+                  <label for="media">Media</label><br />
+                  <input
+                    type="url"
+                    name="media"
+                    id="media"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <!--Ending input-->
+                  <label for="endsAt">Ends at</label><br />
+                  <input
+                    type="datetime-local"
+                    name="endsAt"
+                    id="endsAt"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="d-flex justify-content-center">
+                  <!--Submit button-->
+                  <button type="submit" class="btn d-flex my-3">Submit</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
-      <!--If there is no listing-->
-      <div class="noListing"></div>
     </main>
     <!--Footer-->
-    <footer style="width: 100%; margin: auto">
+    <footer class="fixed-bottom">
       <div class="footer d-flex justify-content-around mt-3">
         <div
           class="footer-right d-flex justify-content-center row"
@@ -126,11 +174,11 @@
           <h2 class="d-flex justify-content-center">Treasures</h2>
           <a
             class="d-flex justify-content-center"
-            href="/Treasures/listings/index.html"
+            href="/code/listings/index.html"
             >Listings</a
           >
         </div>
-        <div class="footer-left">
+        <div class="footer-left col-md-5">
           <h2 class="d-flex justify-content-center">Social Media</h2>
           <div class="socials d-flex justify-content-center">
             <i class="fa-brands fa-instagram fa-3x m-2"></i>

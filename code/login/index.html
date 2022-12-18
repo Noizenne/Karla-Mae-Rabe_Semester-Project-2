@@ -16,10 +16,10 @@
       src="https://kit.fontawesome.com/d527618ed6.js"
       crossorigin="anonymous"
     ></script>
-    <title>Treasures | Edit avatar</title>
+    <title>Treasures | Login</title>
     <meta
       name="description"
-      content="This is the page where you can edit your avatar on Treasures Auction House."
+      content="This is the login page of Treasures Auction House. Here you can login if you are a registered user."
     />
   </head>
   <body>
@@ -49,39 +49,22 @@
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav">
-              <!--Navbar when not logged in-->
-              <div class="not-logged-in d-flex">
-                <li class="nav-item">
-                  <a
-                    class="nav-link me-4"
-                    id="login-link"
-                    href="/Treasures/login/index.html"
-                    >Login</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn" href="/Treasures/register/index.html"
-                    >Sign Up</a
-                  >
-                </li>
-              </div>
-              <!--Navbar when logged in-->
-              <div class="logged-in d-none">
-                <li class="nav-item">
-                  <button class="btn me-2" style="border: none" id="logout">
-                    Logout
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button
-                    type="click"
-                    class="btn"
-                    onclick="location.href='/Treasures/profile/index.html'"
-                  >
-                    Profile
-                  </button>
-                </li>
-              </div>
+              <!--Navbar links-->
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="login-link"
+                  href="/code/login/index.html"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn active"
+                  href="/code/register/index.html"
+                  >Sign Up</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -89,36 +72,49 @@
     </header>
 
     <main>
-      <section>
-        <div class="editAvatar col-md-5 m-auto">
-          <div class="container">
-            <div
-              id="editAvatar-row"
-              class="row justify-content-center align-items-center"
-            >
-              <h3 class="text-center mt-3">Edit you avatar</h3>
-              <!--Edit avatar form-->
-              <form id="editAvatar-form">
-                <div class="form-group">
-                  <label for=""></label><br />
-                  <!--URL input-->
-                  <input
-                    type="url"
-                    name="avatar"
-                    id="avatar"
-                    class="form-control"
-                    placeholder="Place your URL here"
-                  />
-                </div>
-                <div class="d-flex justify-content-center">
-                  <!--Edit button-->
-                  <button type="submit" class="btn d-flex my-3">Edit</button>
-                </div>
-              </form>
-            </div>
+      <div class="login col-md-5 m-auto">
+        <div class="container">
+          <div
+            id="login-row"
+            class="row justify-content-center align-items-center"
+          >
+            <!--Login form-->
+            <form class="login-form">
+              <h3 class="text-center mt-3">Login</h3>
+              <div class="form-group">
+                <!--Email input-->
+                <label for="email">Email</label><br />
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  required
+                  pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                  title="Email must include noroff.no or stud.noroff.no"
+                />
+              </div>
+              <div class="form-group">
+                <!--Password input-->
+                <label for="password">Password</label><br />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control"
+                  required
+                  minlength="8"
+                  title="Your password must have at least 8 characters"
+                />
+              </div>
+              <div class="d-flex justify-content-center">
+                <!--Login button-->
+                <button type="submit" class="btn d-flex my-3">Login</button>
+              </div>
+            </form>
           </div>
         </div>
-      </section>
+      </div>
     </main>
     <!--Footer-->
     <footer class="fixed-bottom">
@@ -130,7 +126,7 @@
           <h2 class="d-flex justify-content-center">Treasures</h2>
           <a
             class="d-flex justify-content-center"
-            href="/Treasures/listings/index.html"
+            href="/code/listings/index.html"
             >Listings</a
           >
         </div>

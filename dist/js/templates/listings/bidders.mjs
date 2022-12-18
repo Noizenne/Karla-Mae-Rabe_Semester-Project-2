@@ -15,7 +15,7 @@ export function biddersListing(listingData) {
     const section = document.createElement("div");
     section.classList.add("topBidders");
     section.classList.add("m-2");
-    section.innerHTML = `<a href="/Treasures/user/index.html?name=${bidders.bidderName}">
+    section.innerHTML = `<a href="/code/user/index.html?name=${bidders.bidderName}">
      <div class="bidder">
      <div style="font-size: 20px; font-weight: bold;">${bidders.amount} credits</div>
      <p>${bidders.bidderName}</p>

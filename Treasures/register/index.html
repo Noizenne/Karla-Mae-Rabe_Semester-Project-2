@@ -24,79 +24,51 @@
   </head>
   <body>
     <header>
-      <!--Navbar-->
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid d-flex justify-content-around">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!--Navbar search form-->
-            <form class="d-flex" role="search" id="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                id="searchInput"
-              />
-            </form>
-          </div>
-          <!--Logo-->
-          <a class="navbar-brand" href="/index.html"
-            ><img src="/images/TLogo.png" alt="The Treasures logo"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!--Navbar links-->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarSupportedContent"
-          >
-            <ul class="navbar-nav">
-              <!--Navbar when not logged in-->
-              <div class="not-logged-in d-flex">
-                <li class="nav-item">
-                  <a
-                    class="nav-link me-4"
-                    id="login-link"
-                    href="/Treasures/login/index.html"
-                    >Login</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn" href="/Treasures/register/index.html"
-                    >Sign Up</a
-                  >
-                </li>
-              </div>
-              <!--Navbar when logged in-->
-              <div class="logged-in d-none">
-                <li class="nav-item">
-                  <button class="btn me-2" style="border: none" id="logout">
-                    Logout
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button
-                    type="click"
-                    class="btn"
-                    onclick="location.href='/Treasures/profile/index.html'"
-                  >
-                    Profile
-                  </button>
-                </li>
-              </div>
-            </ul>
-          </div>
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/index.html"
+          ><img src="/images/TLogo.png" alt="The Treasures logo"
+        /></a>
+
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <!--Navbar links-->
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="login-link"
+                href="/Treasures/login/index.html"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn active"
+                href="/Treasures/register/index.html"
+                >Sign Up</a
+              >
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
     </header>
     <main>
       <div class="register col-md-5 m-auto">

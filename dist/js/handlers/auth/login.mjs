@@ -9,8 +9,7 @@ export function setLoginFormListener() {
     const form = event.target;
     const formData = new FormData(form);
     const profile = Object.fromEntries(formData.entries());
-    console.log("Logged In");
-    console.log(profile);
+    
     login(profile);
   });
 }

@@ -28,6 +28,7 @@ if (path === "/index.html" || path === "/") {
 } else if (path === "/code/profile/index.html" || path === "/code/profile/") {
   templates.profileTemplate();
   templates.profileListingsTemplate();
+  templates.plus();
   templates.loggedInName();
   handlers.logoutListener();
 } else if (path === "/code/profile/create/index.html" || path === "/code/preofile/create/") {

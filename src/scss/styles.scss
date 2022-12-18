@@ -184,6 +184,18 @@ p,
   h2 {
     text-align: center;
   }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: auto;
+  }
+  
+  /* .welcomeText {
+    width: 100%;
+  } */
 }
 @media only screen and (max-width: 600px) {
   body {
@@ -209,6 +221,11 @@ p,
   }
 }
 @media only screen and (max-width: 500px) {
+
+  /* .welcomeText {
+    font-size: 14px;
+  }
+   */
   .single,
   .profile {
     display: flex;

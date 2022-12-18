@@ -11,7 +11,6 @@ export function biddingFormListener() {
       const bid = event.target.amount.value;
 
       postBid(id, Number(bid));
-      console.log(id, Number(bid));
     });
   }
 }

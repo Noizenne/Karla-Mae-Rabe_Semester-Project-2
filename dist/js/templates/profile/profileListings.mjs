@@ -10,6 +10,7 @@ export function templateProfileListings(listingData) {
 
     const section = document.createElement("div");
     section.classList.add("listing");
+    section.classList.add("m-2");
     section.innerHTML = `<a href="/code/listings/listing/index.html?id=${listings.id}">
     <div class="d-flex justify-content-center">${listings.title}</div>
      <div class="d-flex justify-content-center align-items-center  date"><i class="fa-solid fa-hourglass-start"></i>${endsAtDate}</div></a>

@@ -12,6 +12,13 @@ export async function loggedInName() {
 
     navNotLoggedIn.classList.add("d-none");
     navNotLoggedIn.classList.remove("d-flex");
+  }
+}
+
+export function plus() {
+  const loggedIn = load("profile");
+
+  if(loggedIn) {
 
     document.querySelector("#plus").disabled = false;
   } else {

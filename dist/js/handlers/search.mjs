@@ -10,15 +10,12 @@ export async function searchListener() {
     event.preventDefault();
 
     const listings = await getListings();
-    console.log(listings);
-
     const filteredListings = listings.filter((listing) => {
       const endsAt = listing.endsAt;
       const endsAtDate = newDate(endsAt);
       const title = listing.title.toLowerCase();
 
       const searchValue = searchInput.value.toLowerCase();
-      console.log(searchValue);
 
       if (title.includes(searchValue)) {
         listingsContainer.innerHTML = `<div class="listing">

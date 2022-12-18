@@ -24,7 +24,7 @@ export async function login(profile) {
     const profile = await response.json();
     storage.save("token", profile.accessToken);
     storage.save("profile", profile);
-    window.location.href = `/Treasures/profile/index.html?name=${profile.name}`;
+    window.location.href = `/code/profile/index.html?name=${profile.name}`;
     return profile;
   }
 

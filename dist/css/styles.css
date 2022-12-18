@@ -10805,6 +10805,17 @@ img {
   color: #e9e0cf;
 }
 
+.editBtn {
+  border: none;
+  background-color: #f8f3ea;
+  display: flex;
+  justify-content: center;
+}
+
+.editBtn:hover {
+  cursor: pointer;
+}
+
 .logout:hover {
   cursor: pointer;
 }

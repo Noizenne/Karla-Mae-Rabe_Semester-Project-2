@@ -29,7 +29,7 @@ export function templateProfileListings(listingData) {
 }
 
 export function renderProfileListings(listingData, parent) {
-  parent.append(templateProfileListings(listingData));
+  parent.appendChild(templateProfileListings(listingData));
 }
 
 export async function profileListingsTemplate() {

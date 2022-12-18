@@ -27,7 +27,7 @@ export function biddersListing(listingData) {
 }
 
 export function renderBiddings(listingData, parent) {
-  parent.append(biddersListing(listingData));
+  parent.appendChild(biddersListing(listingData));
 }
 
 export async function biddersTemplate() {

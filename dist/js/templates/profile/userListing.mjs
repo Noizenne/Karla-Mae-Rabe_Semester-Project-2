@@ -32,7 +32,7 @@ export function templateUserListings(listingData) {
 }
 
 export function renderUserListings(listingData, parent) {
-  parent.append(templateUserListings(listingData));
+  parent.appendChild(templateUserListings(listingData));
 }
 
 export async function userListingsTemplate() {

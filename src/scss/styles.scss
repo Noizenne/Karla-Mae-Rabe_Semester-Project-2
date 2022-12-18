@@ -35,6 +35,17 @@ img {
   color: $primary-color;
 }
 
+.editBtn {
+  border: none;
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: center;
+}
+
+.editBtn:hover {
+  cursor: pointer;
+}
+
 .logout:hover {
   cursor: pointer;
 }
